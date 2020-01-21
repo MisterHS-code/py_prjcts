@@ -12,7 +12,10 @@ def players_guess(x):
                 print("Thanks for playing!")
                 running = False
         else:
-            print("Oops! Try again")
+            if guess > x:
+                print("Too high! Try again.")
+            if guess < x:
+                print("Too low! Try again")
             players_guess(x)
     except:
         print("Please input a number") 
